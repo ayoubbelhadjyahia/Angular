@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-4" *ngFor="let i of listeEmploi, let j=index">
+    
+    
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://www.w3.org/html/logo/downloads/HTML5_sticker.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"> ref {{i.reference}}</p>
+          <p class="card-text">Title {{i.title}} </p>
+          <p class="card-text">Price {{i.entreprise}} </p>
+          <p class="card-text">Price {{i.etat}} </p>
+
+          <button class="btn btn-primary" (click)="postuler()" [disabled]="i.etat==false">postuler</button>
+
+    
+        </div>
+      </div>
+    </div>
+    
+    </div>
+    <button (click)="Calculer()" >Bilan</button>
