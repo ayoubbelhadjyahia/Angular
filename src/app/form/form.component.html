@@ -1,0 +1,43 @@
+<form #f="ngForm">
+    <div class="form-group">
+        <label for="exampleInputEmail1">id</label>
+        <input type="number" class="form-control" name="id" required  aria-describedby="emailHelp"placeholder="id" [(ngModel)]="produit.id" #id="ngModel">
+        
+        <div class="alert alert-danger" *ngIf="id.invalid && id.touched">id is required</div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">title</label>
+        <input type="email" class="form-control" name="title" required minlength="3" aria-describedby="emailHelp" placeholder="title"[(ngModel)]="produit.title" #title="ngModel">
+        <div class="alert alert-danger" *ngIf="title.invalid && title.touched">   
+            <div *ngIf="title.errors?.['required']">title is required</div>
+            <div *ngIf="title.errors?.['minlength']">inferieur a 3</div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">quantity</label>
+        <input type="number" class="form-control" name="quantity" required min="10" aria-describedby="emailHelp"placeholder="quantity" [(ngModel)]="produit.quantity" #quantity="ngModel">
+        <div class="alert alert-danger" *ngIf="quantity.invalid  && quantity.touched">     
+        <div *ngIf="quantity.errors?.['required']">quantity is required</div>
+        <div *ngIf="quantity.errors?.['min']">min 10</div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">price</label>
+        <input type="number" class="form-control" name="price" required min="0" max="100"  aria-describedby="emailHelp" placeholder="price" [(ngModel)]="produit.price" #price="ngModel">
+        <div class="alert alert-danger" *ngIf="price.invalid && price.touched">     
+            <div *ngIf="price.errors?.['required']">price is required</div>
+            <div *ngIf="price.errors?.['min']">doit etre possitive</div>
+            <div *ngIf="price.errors?.['max']">doit etre inferieur a 100</div>
+        </div>
+
+    </div>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <div>check me </div>
+    <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+</form>
+{{produit.id}} {{produit.title}} {{produit.quantity}} {{produit.price}}

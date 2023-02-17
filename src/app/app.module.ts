@@ -8,6 +8,8 @@ import { OffresEmploiComponentComponent } from './offres-emploi-component/offres
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailproductComponent } from './detailproduct/detailproduct.component';
+import { FormComponent } from './form/form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { DetailproductComponent } from './detailproduct/detailproduct.component'
     OffresEmploiComponentComponent,
     NavbarComponent,
     NotFoundComponent,
-    DetailproductComponent
+    DetailproductComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

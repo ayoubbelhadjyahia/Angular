@@ -1,8 +1,10 @@
 <div class="row">
+  <input type="number" name="price" [(ngModel)]="priceMax">
 <div class="col-md-4" *ngFor="let i of listeProduct, let j=index">
 
 
 <div class="card" style="width: 18rem;">
+  <div *ngIf="i.price < priceMax || priceMax==null"> 
     <img class="card-img-top" src="https://www.w3.org/html/logo/downloads/HTML5_sticker.png" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title"></h5>
@@ -11,12 +13,13 @@
       <p class="card-text">Price {{i.price}} </p>
       <p class="card-text">quantity {{i.quantity}} </p>
       <p class="card-text">like {{i.like}}</p>
-      <div> </div>
       <button class="btn btn-primary" (click)="buy(j)" [disabled]="i.quantity==0">buy</button>
       <button class="btn btn-primary" (click)="like(j)">like</button>
       <button class="btn btn-info" [routerLink]="['/product',i.id]">Detail</button>
 
     </div>
   </div>
+  </div>
 </div>
 </div>
+
