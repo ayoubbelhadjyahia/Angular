@@ -10,6 +10,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailproductComponent } from './detailproduct/detailproduct.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
+import { TemplateDrivenFormComponentComponent } from './template-driven-form-component/template-driven-form-component.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     NotFoundComponent,
     DetailproductComponent,
-    FormComponent
+    FormComponent,
+    TemplateDrivenFormComponentComponent
   ],
   imports: [
     BrowserModule,

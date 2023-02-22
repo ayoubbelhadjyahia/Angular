@@ -1,0 +1,41 @@
+<form class="row g-3" #ff="ngForm">
+    <hr>
+ <p>Information générales</p>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Nom</label>
+      <input type="email" class="form-control" name="nom" required [(ngModel)]="information.nom" #nom="ngModel">
+      <div class="alert alert-danger" *ngIf="nom.invalid && nom.touched">nom is required</div>
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" pattern="xxx.yyy@???.???" required [(ngModel)]="information.email" #email="ngModel">
+      <div class="alert alert-danger" *ngIf="email.invalid && email.touched">is not an Email </div>
+    </div>
+    <p>Information de Payement</p>
+    <form #f="ngForm">
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Type de carte</label>
+      <input type="email" class="form-control" name="type" required [(ngModel)]="information.type" #type="ngModel">
+      <div class="alert alert-danger" *ngIf="type.invalid && type.touched">type is required</div>
+    </div>
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Numéro carte</label>
+      <input type="email" class="form-control" name="numero" required minlength="16" [(ngModel)]="information.numero" #numero="ngModel">
+      <div class="alert alert-danger" *ngIf="numero.invalid && numero.touched">numero is required or less then 16</div>
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">Date expiration</label>
+      <input type="email" class="form-control" name="date" required [(ngModel)]="information.date" #date="ngModel">
+      <div class="alert alert-danger" *ngIf="date.invalid && date.touched">date is required</div>
+    </div>
+</form>
+    <div class="col-md-6">
+        <label for="inputCity" class="form-label">Code</label>
+        <input type="email" class="form-control" [disabled]="f.invalid">
+      </div>
+
+   
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary" [disabled]="ff.invalid">Sign in</button>
+    </div>
+  </form>

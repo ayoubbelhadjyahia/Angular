@@ -1,3 +1,4 @@
+import { TemplateDrivenFormComponentComponent } from './template-driven-form-component/template-driven-form-component.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DetailproductComponent } from './detailproduct/detailproduct.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path:'products',component:ProductComponent},{path:'emplois',component:OffresEmploiComponentComponent},
   {path:'product/:id',component:DetailproductComponent},
   {path:'form',component:FormComponent},
+  {path:'TempForm',component:TemplateDrivenFormComponentComponent},
   {path:'**',component:NotFoundComponent}
   
 ];
