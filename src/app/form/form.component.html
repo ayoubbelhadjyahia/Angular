@@ -1,3 +1,7 @@
+<div class="container h-100">
+    <div class=" row h-100 justify-content-center align-items-center">
+        <div class="col-10 col-md-8 col-lg-6">
+
 <form #f="ngForm">
     <div class="form-group">
         <label for="exampleInputEmail1">id</label>
@@ -38,6 +42,7 @@
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
     <div>check me </div>
-    <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+    <button type="submit" class="btn btn-primary"  [disabled]="f.invalid" (click)="ajouter()">Submit</button>
 </form>
-{{produit.id}} {{produit.title}} {{produit.quantity}} {{produit.price}}
+</div>
+</div></div>
