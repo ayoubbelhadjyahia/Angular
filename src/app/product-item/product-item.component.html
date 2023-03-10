@@ -10,5 +10,6 @@
         <button class="btn btn-primary"(click)="sendNotifToProduct()" >like</button>
         <button class="btn btn-primary"[disabled]="p.quantity==0"(click)="sendNotifBuy()" >buy</button>
         <button class="btn btn-info" [routerLink]="['/product',p.id]">Detail</button>
+        <button class="btn btn-info" (click)="DeleteProduct()">Delete</button>
 
       </div>

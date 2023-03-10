@@ -8,7 +8,7 @@
 
 <div class="card" style="width: 18rem;">
   <div *ngIf="i.price < priceMax || priceMax==null">
-    <app-product-item [p]=i (incrimentEvent)="like($event)" (incrimentBuy)="buy($event)"></app-product-item>
+    <app-product-item [p]=i (incrimentEvent)="like($event)" (incrimentBuy)="buy($event)" (delete)="delete($event)"></app-product-item>
   </div>
   </div>
 </div>
