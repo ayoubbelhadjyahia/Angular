@@ -20,13 +20,15 @@ export class ProductComponent implements OnInit {
     this.alertStock=this.Calcul.getNumberOf(this.listeProduct,"quantity",0);
 
   }
-  buy(j:number){
+  buy(product:Product){
+    let j =this.listeProduct.indexOf(product)
     this.listeProduct[j].quantity --;
   }
-  like(j:number){
-    this.listeProduct[j].like ++
+  like(product:Product){
+    let j =this.listeProduct.indexOf(product)
+    this.listeProduct[j].like ++;
   }
 
-  
+
 
 }

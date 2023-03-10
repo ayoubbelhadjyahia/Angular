@@ -1,0 +1,14 @@
+
+      <img class="card-img-top" src="https://www.w3.org/html/logo/downloads/HTML5_sticker.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"> id {{p.id}}</p>
+        <p class="card-text">Title {{p.title}} </p>
+        <p class="card-text">Price {{p.price}} </p>
+        <p class="card-text">quantity {{p.quantity}} </p>
+        <p class="card-text">like {{p.like}}</p>
+        <button class="btn btn-primary"(click)="sendNotifToProduct()" >like</button>
+        <button class="btn btn-primary"[disabled]="p.quantity==0"(click)="sendNotifBuy()" >buy</button>
+        <button class="btn btn-info" [routerLink]="['/product',p.id]">Detail</button>
+
+      </div>
