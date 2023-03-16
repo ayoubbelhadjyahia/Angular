@@ -18,6 +18,8 @@ export class ConsumerService {
   }
   DeleteProduct(productId :number){
     return this.http.delete("http://localhost:3000/Products/"+ productId);
-
 }
+  getProductById(id:number){
+    return this.http.get("http://localhost:3000/Products/"+id);
+  }
 }

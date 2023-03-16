@@ -35,7 +35,7 @@ export class ProductComponent implements OnInit {
     this.listeProduct[j].like ++;
   }
   delete(id:number){
-  this.ConsumerSer.DeleteProduct(id).subscribe();
+  this.ConsumerSer.DeleteProduct(id).subscribe({next:()=>this.ngOnInit()});
   }
 
 
